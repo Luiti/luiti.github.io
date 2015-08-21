@@ -1,0 +1,29 @@
+{
+  "name": "luiti.github.io",
+  "version": "0.0.1",
+  "homepage": "https://github.com/luiti/luiti.github.com",
+  "main": "main.js",
+  "dependencies": {
+    "underscore": "~= 1.8",
+    "marked": "chjj/marked#0.3.5",
+    "bootstrap": "~= 3.3"
+  },
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "luiti",
+    "luigi",
+    "Python",
+    "Hadoop",
+    "mvj3"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
