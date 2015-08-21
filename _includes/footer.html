@@ -2,13 +2,11 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
     <div class="footer-col-wrapper">
-      <div class="footer-col  footer-col-1">
+
+      <div class="footer-col  footer-col-4">
         <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li>{{ site.description }}</li>
         </ul>
       </div>
 
@@ -42,14 +40,26 @@
             </a>
           </li>
           {% endif %}
+
+          <li id="luiti_email"><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+
         </ul>
       </div>
 
-      <div class="footer-col  footer-col-3">
-        <p class="text">{{ site.description }}</p>
-      </div>
     </div>
 
   </div>
 
 </footer>
+
+
+<script>
+  $(document).ready(function() {
+    // reverse email to a normal one.
+    var email_dom = $("#luiti_email");
+    var reverse_email = email_dom.text().split("").reverse().join("");  // http://stackoverflow.com/questions/958908/how-do-you-reverse-a-string-in-place-in-javascript
+    email_dom.text(reverse_email);
+
+
+  });
+</script>
