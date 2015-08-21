@@ -2,6 +2,9 @@
   "name": "luiti.github.io",
   "version": "0.0.1",
   "homepage": "https://github.com/luiti/luiti.github.com",
+  "authors": [
+    "David Chen"
+  ],
   "main": "main.js",
   "dependencies": {
     "underscore": "~= 1.8",
