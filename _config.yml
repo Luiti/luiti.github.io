@@ -9,10 +9,12 @@ url: "http://luiti.github.io" # the base hostname & protocol for your site
 twitter_username: mvj3
 github_username:  luiti
 
-# Build settings
-markdown: kramdown
-
-
 github:
   repo: https://github.com/luiti/luiti
 version: 0.2.1 # luiti version
+
+# Dependencies
+markdown:         redcarpet  # support 1. anchor 2. code highlight
+redcarpet:  # ref from https://github.com/jekyll/jekyll/issues/1249
+    extensions: [with_toc_data]
+highlighter:      pygments
