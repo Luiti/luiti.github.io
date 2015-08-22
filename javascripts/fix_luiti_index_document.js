@@ -53,7 +53,13 @@ $(document).ready(function() {
   sidebar.append(sidebar_document_guide_css);
 
   // Fix broken luiti anchor.
-  $(".content p:first").attr("id", "luiti");
+  var badgets_dom = $(".content p:first");
+  badgets_dom.attr({"id": "luiti"});
+
+
+  var content_dom = $("body .content");
+  content_dom.find("h1:first").remove();
+  content_dom.find("p:first").remove();
 
 
 });
