@@ -1,4 +1,5 @@
 # Site settings
+project_name: Luiti
 title: Luiti - An offline task management framework.
 email: moc.liamg@emojvm
 description: > # this means to ignore newlines until "baseurl:"
@@ -10,3 +11,8 @@ github_username:  luiti
 
 # Build settings
 markdown: kramdown
+
+
+github:
+  repo: https://github.com/luiti/luiti
+version: 0.2.1 # luiti version
