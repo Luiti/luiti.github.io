@@ -60,3 +60,4 @@ target/
 _site
 .sass-cache
 bower_components
+.DS_Store
