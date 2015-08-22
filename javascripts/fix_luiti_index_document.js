@@ -58,8 +58,9 @@ $(document).ready(function() {
 
 
   var content_dom = $("body .content");
-  content_dom.find("h1:first").remove();
-  content_dom.find("p:first").remove();
+  var luiti_logo = content_dom.find("h1:first");
+  $(".sidebar-about h1:first a").html(luiti_logo);
+  content_dom.find("p:first").html("");
 
 
 });
