@@ -46,7 +46,7 @@ $(document).ready(function() {
     + "  margin-top: -10px;"
     + "}"
     + ".sidebar p {"
-    + "  font-size: 15px;"
+    + "  font-size: 18px;"
     + "}"
     + "</style>"
   );

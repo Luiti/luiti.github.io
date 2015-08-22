@@ -6,6 +6,7 @@ TODO
 ---------------------------
 * 中英文都有, 两份。
 * homepage should be concise.
+* add google analysis
 
 
 Assets
