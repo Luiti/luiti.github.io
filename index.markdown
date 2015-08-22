@@ -273,6 +273,7 @@ class ArtistStreamDay(StaticFile):
 ```
 
 * Second file: `artist_project/luiti_tasks/aggregate_artists_week.py`
+
 ```python
 from luiti import *
 
@@ -476,7 +477,7 @@ with the MR file result data format that consists by "part-00000" file blocks.
   that generated in production mode.
 4. Run your test cases!
 
-buy_fruit_day.py
+`buy_fruit_day.py`
 
 ```python
 from luiti import *
@@ -526,7 +527,8 @@ class BuyFruitDay(TaskDayHadoop):
 
 ```
 
-test file
+`test file`
+
 ```python
 from luiti import MrTestCase
 
@@ -586,6 +588,7 @@ questions at [issues](https://github.com/luiti/luiti/issues).
 
 Run tests
 ------------------------
+
 ```bash
 nosetests
 # or
@@ -604,6 +607,6 @@ Please let us know if your company wants to be featured on this list!
 
 License
 ------------------------
-MIT. David Chen @ luiti.
+MIT.
 
 <script src="{{ "/javascripts/fix_luiti_index_document.js" | prepend: site.baseurl }}" type="text/javascript"></script>
