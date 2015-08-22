@@ -14,7 +14,11 @@ title: Home
 
 """
 
-new_content = (layout_content + orig_content).strip()
+appended = """
+<script src="{{ "/javascripts/fix_luiti_index_document.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+"""
+
+new_content = (layout_content + orig_content + appended).strip()
 new_file = file("index.markdown", "w")
 new_file.write(new_content)
 new_file.close()

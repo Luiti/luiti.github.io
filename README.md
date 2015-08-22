@@ -5,6 +5,7 @@ Luiti website.
 TODO
 ---------------------------
 * 中英文都有, 两份。
+* homepage should be concise.
 
 
 Assets

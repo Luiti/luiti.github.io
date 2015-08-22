@@ -605,3 +605,5 @@ Please let us know if your company wants to be featured on this list!
 License
 ------------------------
 MIT. David Chen @ luiti.
+
+<script src="{{ "/javascripts/fix_luiti_index_document.js" | prepend: site.baseurl }}" type="text/javascript"></script>
