@@ -44,7 +44,7 @@ Document guide
 3. [Luiti command tool](#luiti-command-tool)
 2. [Luiti WebUI screenshots](#luiti-webui-screenshots)
 4. [Core concepts based on time management](#core-concepts-based-on-time-management)
-5. [Task specification and built-in properties and recommendation](#task-specification-and-built-in-properties-and-recommendation)
+5. [Built-in properties](#task-specification-and-built-in-properties-and-recommendation)
 6. [Manage multiple projects in luiti](#manage-multiple-projects-in-luiti)
 7. [A simple guide to Luigi](#a-simple-guide-to-luigi)
 8. [A simple example in luiti](#a-simple-example-in-luiti)
