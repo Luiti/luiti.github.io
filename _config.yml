@@ -30,4 +30,25 @@ chinese_article:
     本系列文章的侧重点在于从 Python 的函数式特征出发，来逐步讲解一个有约定而不失灵活性的离线数据仓库处理框架是怎么来的，
     和可以做什么。欢迎关注 http://luiti.github.io 。
 
-
+  articles_list:
+    1:
+      en: Processing data in a DAG way
+      zh: 使用 DAG 来解耦 数据处理中的复杂逻辑
+    2:
+      en: The core concepts of Luigi
+      zh: Luigi 的核心概念
+    3:
+      en: Luiti as a data warehouse building framework
+      zh: 用 Luiti 作为构建数据仓库的软件框架
+    4:
+      en: Visualization in Luiti
+      zh: Luiti 里的可视化
+    5:
+      en: MapReduce and testing in Luiti
+      zh: 在 Luiti 里写 MapReduce 及单元测试
+    6:
+      en: Decorators in Luiti
+      zh: Luiti 里的装饰器
+    7:
+      en: Luiti code architecture guide
+      zh: Luiti 代码架构概览
