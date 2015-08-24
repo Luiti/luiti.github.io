@@ -17,12 +17,12 @@ Python module that helps you build complex pipelines of batch jobs. It
 handles dependency resolution, workflow management, visualization etc.
 It also comes with Hadoop support built in."
 
-Luiti is built on top of Luigi, separates all your tasks into multiple
-packages, and forces one task per one Python file. Luiti task classes
+Luiti is built on top of Luigi, separates all your tasks into **multiple
+packages**, and forces **one task per one Python file**. Luiti task classes
 can be managed by the `luiti` command, supported operations are ls, new,
 generate, info, clean, run, and webui.
 
-Luiti is born to build a layered database warehouse, corresponding to
+Luiti is born to build **a layered database warehouse**, corresponding to
 the different packages we just mentioned. A data warehouse is consisted
 of synced data sources, fact tables, dimension tables, regular or
 temporary business reports.
@@ -35,7 +35,7 @@ TaskWeekHadoop, and so on.
 
 You can pass any parameters into Luigi's tasks, but Luiti recommend you
 to pass only `date_value` parameter. So you can run Luiti tasks
-periodically, e.g. hourly, daily, weekly, etc. luiti = luigi + time.
+periodically, e.g. hourly, daily, weekly, etc. **luiti = luigi + time**.
 
 
 Document guide
