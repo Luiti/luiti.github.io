@@ -19,6 +19,6 @@ appended = """
 """
 
 new_content = (layout_content + orig_content + appended).strip()
-new_file = file("index.markdown", "w")
+new_file = file("document_guide.markdown", "w")
 new_file.write(new_content)
 new_file.close()

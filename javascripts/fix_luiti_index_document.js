@@ -27,6 +27,9 @@ $(document).ready(function() {
   var document_guide_list = document_guide_title.next("ol");  // ordered list
   var sidebar = $(".sidebar .sidebar-nav");
 
+  // Remove root links
+  sidebar.html("");
+
   var merge_dom = document_guide_title.add(document_guide_list);
   var sidebar_document_guide = $("<div id='document-guide-sidebar'>").html(merge_dom);
   sidebar.append(sidebar_document_guide);
@@ -40,10 +43,10 @@ $(document).ready(function() {
     + "  color: #fff;"
     + "}"
     + "#document-guide-sidebar ol li a {"
-    + "  font-size: 13px;"
+    + "  font-size: 18px;"
     + "}"
     + "#document-guide-sidebar ol li {"
-    + "  margin-top: -10px;"
+    + "  margin-top: -5px;"
     + "}"
     + ".sidebar p {"
     + "  font-size: 18px;"
@@ -56,10 +59,8 @@ $(document).ready(function() {
   var badgets_dom = $(".content p:first");
   badgets_dom.attr({"id": "luiti"});
 
-
+  // Add 'Luiti Introduction' text
   var content_dom = $("body .content");
-  var luiti_logo = content_dom.find("h1:first");
-  $(".sidebar-about h1:first a").html(luiti_logo);
   var introduction_dom = $("<h1>Luiti Introduction</h1>");
   content_dom.find("p:first").html(introduction_dom);
 
