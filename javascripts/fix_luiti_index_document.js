@@ -60,7 +60,8 @@ $(document).ready(function() {
   var content_dom = $("body .content");
   var luiti_logo = content_dom.find("h1:first");
   $(".sidebar-about h1:first a").html(luiti_logo);
-  content_dom.find("p:first").html("");
+  var introduction_dom = $("<h1>Luiti Introduction</h1>");
+  content_dom.find("p:first").html(introduction_dom).css("margin-top", "-80px");
 
 
 });
