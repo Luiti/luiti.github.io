@@ -17,6 +17,7 @@ title: 一种用 Python 模块化编程 来构建数据仓库 的新方式
 
 ## Python 在数据仓库领域中可以为我们带来什么?
 
+### 基本 Python 预备知识
 
 ## Luigi 为我们带来了全新的计算范式
 
@@ -26,3 +27,6 @@ title: 一种用 Python 模块化编程 来构建数据仓库 的新方式
 2. Task (4 elements)
 
 ## luiti
+
+
+
