@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: chinese_luiti
 title: 使用 DAG 来解耦 数据处理中的复杂逻辑
 ---
 

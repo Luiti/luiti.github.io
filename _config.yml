@@ -52,3 +52,6 @@ chinese_article:
     7:
       en: Luiti code architecture guide
       zh: Luiti 代码架构概览
+    8:
+      en: Use Validata to protect the correctness of the data flow
+      zh: 用 Validata 去保障数据流的正确性

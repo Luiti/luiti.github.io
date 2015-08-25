@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  {% include head.html %}
+
+  <body class="theme-base-0c">
+
+    {% include sidebar.html %}
+
+    <div class="content container">
+      {{ content }}
+    </div>
+
+  </body>
+</html>
+
+<style>
+div.content.container {
+  margin-top: -80px;
+  min-width: 60%;
+}
+</style>
+
+
+<!-- Sidebar navigator links -->
+<div id="articles_list_data" class="hidden">
+{{ site.chinese_article.articles_list | jsonify }}
+</div>
+<script>
+  $(document).ready(function() {
+    var sidebar = $(".sidebar .sidebar-nav");
+
+    // Remove root links
+    sidebar.html("");
+
+    var sidebar_nav_item_template = _.template(""
+      + "<a class='sidebar-nav-item' href='<%= link %>'><%= idx %>. <%= name %></a>"
+    );
+
+    var articles_list_data = JSON.parse($("#articles_list_data").text()),
+        items = [];
+
+    items = items.concat( $("<h3 style='color:white;'>使用 Luiti 来构建数据仓库</h3>") );
+
+    _.each(_.keys(articles_list_data), function(idx) {
+      var article = articles_list_data[idx];
+      var link = "/chinese/" + article.en.replace(/ /g, "-") + ".html";
+
+      // fix unfinished article link
+      var finished_articles_idxes = ["1"];
+      var is_finished = _.contains(finished_articles_idxes, idx);
+
+      link = is_finished ? link : "/chinese/index.html";
+
+      var _html = sidebar_nav_item_template({
+        "link": link,
+        "idx": idx,
+        "name": article.zh,
+      });
+
+      var _dom = $(_html);
+      if (!is_finished) {
+        _dom.css("text-decoration", "line-through");
+      };
+
+      items = items.concat(_dom);
+    });
+
+    sidebar.html(items);
+
+  });
+</script>
