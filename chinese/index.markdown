@@ -17,6 +17,6 @@ layout: chinese_luiti
     <iframe src = "/public/viewerjs-0.5.8/ViewerJS/#/public/pdfs/Luiti - An Offline Task Management Framework.pdf" width='500' height='450' allowfullscreen webkitallowfullscreen></iframe>
   </div>
   <div class="span6">
-    <iframe height=450 width=480 src="http://player.youku.com/embed/XMTI5MjE1MTA4NA==" frameborder=0 allowfullscreen></iframe>
+    <iframe height=450 width=480 src="//player.youku.com/embed/XMTI5MjE1MTA4NA==" frameborder=0 allowfullscreen></iframe>
   </div>
 </div>
