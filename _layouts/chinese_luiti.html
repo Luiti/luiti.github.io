@@ -73,5 +73,13 @@ div.content.container {
 
     sidebar.append($("<div style='color:white;text-align:right;margin-top:20px;'>* 划线的文章链接表示还未完成。</div>"));
 
+
+    // Fix youku iframe dont support https
+    // via http://stackoverflow.com/questions/18327314/how-to-allow-http-content-within-an-iframe-on-a-https-site
+    if (window.location.protocol == "https:") {
+      var new_url = window.location.href.replace("https", "http");
+      window.location = new_url;
+    };
+
   });
 </script>
