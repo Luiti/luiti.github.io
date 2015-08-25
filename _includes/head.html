@@ -16,11 +16,23 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="{{ "/bower_components/bootstrap/dist/css/bootstrap.min.css" | prepend: site.baseurl }}">
-
   <link rel="stylesheet" href="{{ "/public/css/poole.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/public/css/syntax.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/public/css/hyde.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Fix bootstrap overwrite the poole CSS -->
+  <style>
+  .sidebar .container {
+    width: 350px;
+  }
+  .sidebar .container .sidebar-about p.lead {
+    font-size: 18px;
+  }
+  .sidebar .container .sidebar-nav a {
+    font-size: 16px;
+  }
+  </style>
 
 
   <!-- JavaScript -->
@@ -32,4 +44,5 @@
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+
 </head>
