@@ -40,7 +40,10 @@ div.content.container {
     var articles_list_data = JSON.parse($("#articles_list_data").text()),
         items = [];
 
-    items = items.concat( $("<h3 style='color:white;'>使用 Luiti 来构建数据仓库</h3>") );
+    items = items.concat($("<a href='/chinese/index.html'>"
+      + "<h3 style='color:white;'>使用 Luiti 来构建数据仓库</h3>"
+      + "</a>"
+    ));
 
     _.each(_.keys(articles_list_data), function(idx) {
       var article = articles_list_data[idx];
