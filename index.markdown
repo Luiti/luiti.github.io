@@ -30,6 +30,11 @@ the different packages we just mentioned. A data warehouse is consisted
 of synced data sources, fact tables, dimension tables, regular or
 temporary business reports.
 
+## Luiti let you 专注业务，而不是代码组织
+
+直接把代码变成可视化。截图。
+
+![luiti_context_abstract_machine](/images/luiti_context_abstract_machine.png)
 
 <style>
 div#luiti_luigi_logos span {
@@ -44,8 +49,14 @@ div#luiti_luigi_logos span.text {
 }
 
 div.content.container p {
-  float: right;
 }
 
+
+hr {
+  color: #f00;
+  background-color: #f00;
+  height: 5px;
+  float: right;
+}
 
 </style>
