@@ -1,3 +1,5 @@
 public/viewerjs-0.5.8/* linguist-vendored
 public/css/* linguist-vendored
 bower_components linguist-vendored
+_sass linguist-vendored
+css/main.scss linguist-vendored
