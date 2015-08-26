@@ -17,15 +17,48 @@ title: Home
 <h3 class="logo_description">{{ site.description }}</h3>
 
 
-<div>
-  <h1>Provoide well structure for your ETL code</h1>
-## Luiti let you 专注业务，而不是代码组织
+<div id="luiti_features" comment="TODO need improve ...">
+  <div>
+    <h1>1. Well code structure</h1>
+    <img src="/images/intro/Well code structure.png" alt="Well code structure" height="600px" width="1000px">
+  </div>
 
-直接把代码变成可视化。截图。
+  <div>
+    <h1>2. Simple concept</h1>
+    <img src="/images/intro/Simple concept.png" alt="Simple concept" height="600px" width="1000px">
+  </div>
 
-![luiti_context_abstract_machine](/images/luiti_context_abstract_machine.png)
+  <div>
+    <h1>3. Visualize tasks</h1>
+    <img src="https://raw.githubusercontent.com/luiti/luiti/master/screenshots/luiti_webui_list.png" alt="Simple concept" >
+  </div>
+
+  <div class="hadoop_support">
+    <h1>4. Hadoop support</h1>
+    <ol>
+      <li>
+        <a href="https://github.com/spotify/luigi/blob/master/luigi/contrib/hadoop.py">
+          MapReduce Streaming with Python
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/spotify/luigi/blob/master/luigi/contrib/hive.py">
+          Hive
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/spotify/luigi/blob/master/luigi/contrib/">
+          and more ...
+        </a>
+      </li>
+    </ol>
+  </div>
 </div>
 
+<div id="want_to_know_more">
+  <h2> Want to know more about Luiti ?</h2>
+  <h2> Take a look at the links at the left sidebar.</h2>
+</div>
 
 <style>
 div#luiti_luigi_logos {
@@ -51,6 +84,17 @@ h3.logo_description {
   color: #56BB00;
 }
 
+
+#luiti_features h1 {
+  text-align: center;
+}
+#luiti_features .hadoop_support ol li {
+  font-size: 26px;
+}
+
+#want_to_know_more h2 {
+  text-align: center;
+}
 
 
 </style>

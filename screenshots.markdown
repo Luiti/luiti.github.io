@@ -17,7 +17,7 @@ These screenshots just give you an idea of how luiti's multiple Python packages 
 ![Luiti Code show](https://raw.githubusercontent.com/luiti/luiti/master/screenshots/luiti_code_show.png)
 
 
-## How to generate above WebUI
+## How to generate WebUI above
 
 ```bash
 ./example_webui_run.py
