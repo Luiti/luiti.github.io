@@ -17,6 +17,7 @@ title: Home
 </div>
 <h3 class="logo_description">{{ site.description }}</h3>
 
+<hr>
 
 <div id="luiti_features" comment="TODO need improve ...">
   <div class="row">
@@ -66,8 +67,15 @@ title: Home
 </div>
 
 
+<hr>
+<h1 class="get_started">
+  <a class="btn btn-default btn-lg" href="/document_guide.html" style="color: #56BB00;">Get Started</a>
+</h1>
+
+
 <style>
 div#luiti_luigi_logos {
+  margin-left: 10%;
 }
 div#luiti_luigi_logos span {
   float: left;
@@ -78,6 +86,7 @@ div#luiti_luigi_logos span {
 div#luiti_luigi_logos span.text {
   margin-left: 20px;
   margin-right: 20px;
+  color: #56BB00;
 }
 
 div.content.container p {
@@ -96,13 +105,25 @@ h3.logo_description {
 }
 #luiti_features h2 {
   text-align: center;
+  color: #56BB00;
 }
 #luiti_features .hadoop_support ol li {
   font-size: 20px;
+  color: #56BB00;
+}
+#luiti_features .hadoop_support ol li a {
+  color: #56BB00;
 }
 
 a:focus { /* No outline from bootstrap. */
   outline: none;
+}
+
+h1.get_started {
+  text-align: center;
+}
+h1.get_started a {
+  color: #56BB00;
 }
 
 </style>
