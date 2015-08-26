@@ -4,6 +4,7 @@ title: Home
 ---
 
 
+
 <div class="row" id="luiti_luigi_logos">
   <span>
     <img src="https://raw.githubusercontent.com/Luiti/luiti.github.io/master/images/luiti/luiti_rectangle_logo.png" alt="Luiti" height="99px" width="132px">
@@ -20,22 +21,28 @@ title: Home
 <div id="luiti_features" comment="TODO need improve ...">
   <div class="row">
     <div class="col-md-6">
-      <h2>1. Well Code Structure</h2>
-      <img src="/images/intro/Well code structure.png" alt="Well code structure" height="200px" width="240px">
+      <h2>Well Code Structure</h2>
+      <a class="image-popup-vertical-fit" href="/images/intro/Well code structure.png">
+        <img src="/images/intro/Well code structure.png" alt="Well code structure" height="200px" width="240px">
+      </a>
     </div>
     <div class="col-md-6">
-      <h2>2. Simple Concepts</h2>
-      <img src="/images/intro/Simple concept.png" alt="Simple concept" height="200px" width="240px">
+      <h2>Simple Concepts</h2>
+      <a class="image-popup-vertical-fit" href="/images/intro/Simple concept.png">
+        <img src="/images/intro/Simple concept.png" alt="Simple concept" height="200px" width="240px">
+      </a>
     </div>
   </div>
 
   <div class="row">
     <div class="col-md-6">
-      <h2>3. Visualize Tasks</h2>
-      <img src="//raw.githubusercontent.com/luiti/luiti/master/screenshots/luiti_webui_list.png" alt="Simple concept" >
+      <h2>Visualize Tasks</h2>
+      <a class="image-popup-vertical-fit" href="//raw.githubusercontent.com/luiti/luiti/master/screenshots/luiti_webui_list.png">
+        <img src="//raw.githubusercontent.com/luiti/luiti/master/screenshots/luiti_webui_list.png" alt="Simple concept" rel="facebox">
+      </a>
     </div>
     <div  class="col-md-6 hadoop_support">
-      <h2>4. Hadoop Support</h2>
+      <h2>Hadoop Support</h2>
       <ol>
         <li>
           <a href="https://github.com/spotify/luigi/blob/master/luigi/contrib/hadoop.py">
@@ -84,11 +91,36 @@ h3.logo_description {
 }
 
 
-#luiti_features h1 {
+#luiti_features a img {
+  margin: auto;
+}
+#luiti_features h2 {
   text-align: center;
 }
 #luiti_features .hadoop_support ol li {
-  font-size: 26px;
+  font-size: 20px;
+}
+
+a:focus { /* No outline from bootstrap. */
+  outline: none;
 }
 
 </style>
+
+
+<link rel="stylesheet" href="{{ "/bower_components/magnific-popup/dist/magnific-popup.css" | prepend: site.baseurl }}">
+<script src="{{ "/bower_components/magnific-popup/dist/jquery.magnific-popup.min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+   $('a.image-popup-vertical-fit').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		mainClass: 'mfp-img-mobile',
+		image: {
+			verticalFit: true
+		}
+	});
+
+});
+</script>
