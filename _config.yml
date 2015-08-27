@@ -24,7 +24,7 @@ highlighter:      pygments
 
 chinese_article:
   description: >
-    前言 - 《使用 Luiti 来构建数据仓库》 是关于大数据处理的实战经验总结的系列文章，面向的读者范围是对数据处理有一年以上经验的人。
+    前言 - <a href="/chinese/index.html">《使用 Luiti 来构建数据仓库》</a> 是关于大数据处理的实战经验总结的系列文章，面向的读者范围是对数据处理有一年以上经验的人。
 
     众所周知， Hadoop 和 新兴的 Spark 是当前最流行的分布式计算和存储平台，但是均和保守死板的 Java 编程语言所绑定。
     R 和 SQL 因为专业领域和表达能力的有限性而导致始终不能一统江湖。

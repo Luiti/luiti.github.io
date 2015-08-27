@@ -40,7 +40,7 @@ layout: chinese_luiti
 
 <hr>
 
-## 预备基础知识
+## Luiti 预备基础知识
 1. 了解 Python 中面向对象和程序包的基本概念及其使用。
 2. 了解 MapReduce 概念，并在 Hadoop 或 MongoDB 中使用过。
 
