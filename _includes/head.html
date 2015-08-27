@@ -53,3 +53,21 @@
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
 
 </head>
+
+
+<script>
+  $(document).ready(function() {
+    var is_local = window.location.hostname == "localhost";
+    if (is_local) { return false; }
+
+    setTimeout(function() {
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+      try {
+        var pageTracker = _gat._getTracker("UA-57207964-1");
+        pageTracker._trackPageview();
+      } catch(err) {}
+    }, 1000);
+  });
+</script>
