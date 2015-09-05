@@ -44,12 +44,14 @@ div.content.container {
 
     items = items.concat($( "<h3 style='color:white;'>使用 Luiti 来构建数据仓库</h3>" ));
 
+    var finished_articles_idxes = ["0", "1", "2", "3", "4", "5", "6", "7", "8"];
+    var is_finished = finished_articles_idxes.length == _.keys(articles_list_data).length;
+
     _.each(_.keys(articles_list_data), function(idx) {
       var article = articles_list_data[idx];
       var link = "/chinese/" + article.en.replace(/ /g, "-") + ".html";
 
       // fix unfinished article link
-      var finished_articles_idxes = ["0", "1", "2", ];
       var is_finished = _.contains(finished_articles_idxes, idx);
 
       link = is_finished ? link : "/chinese/index.html";
@@ -70,7 +72,9 @@ div.content.container {
 
     sidebar.html(items);
 
-    sidebar.append($("<div style='color:white;text-align:right;margin-top:20px;'>* 划线的文章链接表示还未完成。</div>"));
+    if (!is_finished) {
+      sidebar.append($("<div style='color:white;text-align:right;margin-top:20px;'>* 划线的文章链接表示还未完成。</div>"));
+    }
 
 
     // Fix youku iframe dont support https
