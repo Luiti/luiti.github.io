@@ -119,7 +119,7 @@ or `scp'ing files <http://luigi.readthedocs.org/en/latest/api/luigi.contrib.ssh.
 
 ## 谁在[使用 Luigi][10] ？
 
-Several companies have written blog posts or presentation about Luigi:
+以下这些公司写了关于 Luigi 相关的博客或演讲稿：
 
 * [Spotify (NYC Data Science)](http://www.slideshare.net/erikbern/luigi-presentation-nyc-data-science)
 * [Foursquare](http://www.slideshare.net/OpenAnayticsMeetup/luigi-presentation-17-23199897)
@@ -130,6 +130,28 @@ Several companies have written blog posts or presentation about Luigi:
 * [SeatGeek](http://chairnerd.seatgeek.com/building-out-the-seatgeek-data-pipeline/)
 * [Treasure Data](http://blog.treasuredata.com/blog/2015/02/25/managing-the-data-pipeline-with-git-luigi/)
 * [Growth Intelligence](http://www.slideshare.net/growthintel/a-beginners-guide-to-building-data-pipelines-with-luigi)
+
+
+## 一个 Luigi 的示例 --- 艺术家排行榜
+
+请访问 Luigi 官方文档 [http://luigi.readthedocs.org/en/latest/example\_top\_artists.html][12] ，里面包括了如下四个部分：
+
+1. 使用 Luigi 模式来编写 Python 代码
+2. 在本地运行这份代码
+3. 改成 Hadoop 的写法
+4. 使用 Luigid 后台调度器。
+
+
+## 到最后还是没有看懂什么是 Luigi ？
+
+如果想要真正地用好 Luigi ，你还是大概得知道它是怎么回事的。简单的说就是以下五个部分：
+
+1. 文件系统抽象，即是数据的抽象。写操作是原子性的，原理是先写到临时文件目录，成功了再改写成正确的路径（记住这是瞬间完成的）。
+2. Task 类，即是执行逻辑的抽象。可以传入不同的参数，可能没有数据输入，但是输出一定存在，Luigi 就是依靠这个机制来避免不会重复运行的。
+3. Luigid 后台进程调度器。所有事情全都是由它驱动执行，包括分析任务依赖，执行顺序，分配 worker，保证唯一性等。外部唯一需要做的就是提交 Python 代码和参数给它即可。
+4. Luigid worker。由 luigid 进程来管理。
+5. Luigid 可视化。直接在网页展现 Luigid 后台进行的内部运行状态。
+
 
 
 [0]: https://github.com/spotify/luigi
@@ -144,3 +166,4 @@ Several companies have written blog posts or presentation about Luigi:
 [9]: http://luigi.readthedocs.org/en/latest/api/luigi.contrib.ssh.html
 [10]: https://github.com/spotify/luigi#who-uses-luigi
 [11]: http://luigi.readthedocs.org/en/latest/
+[12]: http://luigi.readthedocs.org/en/latest/example_top_artists.html
