@@ -6,6 +6,8 @@ title: Luigi 的核心概念
 # {{ page.title }}
 > {{ site.chinese_article.description }}
 
+说明: 以下文档基本翻译自 Luigi 官方 Github  的 [README][0] ，以及 [官方文档主页][11] 。当前文档更新时间为 20150905 ，更多请访问 [https://github.com/spotify/luigi][0] 。
+<hr>
 
 ## Luigi 是什么？
 
@@ -15,6 +17,7 @@ title: Luigi 的核心概念
 <p class="hidden">
 Luigi is a Python module that helps you build complex pipelines of batch jobs. It handles dependency resolution, workflow management, visualization etc. It also comes with Hadoop support built in.
 </p>
+
 
 ## Luigi 的 [更多背景][1]
 
@@ -49,5 +52,95 @@ You can build pretty much any task you want, but Luigi also comes with a toolbox
 </p>
 
 
+## Luigi 的 [任务依赖图例子][2]
+
+只是想为了给你大概了解 Luigi 到底是做什么的，这里选取了一张我们生产环境里跑的任务的截图。
+通过使用 Luigi 的可视化，我们得到了一个漂亮的可视化概览，展现了当前工作流里的整个任务
+依赖图。每个节点都表示要被运行的任务。绿色任务表示已经完成了，相对应的是黄色任务表示还未
+运行。大部分任务都是 Hadoop 任务，但是有些也是跑在本地的，并且也构建了数据文件。
+
+<p class="hidden">
+Just to give you an idea of what Luigi does, this is a screen shot from something we are running in production. Using Luigi's visualizer, we get a nice visual overview of the dependency graph of the workflow. Each node represents a task which has to be run. Green tasks are already completed whereas yellow tasks are yet to be run. Most of these tasks are Hadoop jobs, but there are also some things that run locally and build up data files.
+</p>
+
+![user rec][3]
+
+
+## Luigi 的 [诞生背景][3]
+
+我们在 [Spotify][4] 内部使用 Luigi 来每天跑数以千计的任务，它们被组织在复杂的依赖图里。
+大部分任务都是 Hadoop 任务。Luigi 提供了一种架构，支撑着像 推荐，排行榜，A/B 测试分析
+外部报表，和内部仪表盘等各种任务。Luigi 起源于需要为批处理提供一个强有力的抽象，从而帮助
+程序员专注于最重要的点上面，而把剩下的（就是模版）都交给框架去处理。
+
+<p class="hidden">
+We use Luigi internally at `Spotify <https://www.spotify.com/us/>`_ to run
+thousands of tasks every day, organized in complex dependency graphs.
+Most of these tasks are Hadoop jobs. Luigi provides an infrastructure
+that powers all kinds of stuff including recommendations, toplists, A/B
+test analysis, external reports, internal dashboards, etc. Luigi grew
+out of the realization that powerful abstractions for batch processing
+can help programmers focus on the most important bits and leave the rest
+(the boilerplate) to the framework.
+</p>
+
+从概念上讲，Luigi 类似于 [GNU Make][5]，比如你有一些任务，而这些任务又依赖其他任务。
+这个也和 [Oozie][6] 和 [Azkaban][7] 有些相像。一个显著的不同在于，Luigi 不是只为了
+Hadoop 而构建的，它也很容易扩展到其他类型的任务。
+
+<p class="hidden">
+Conceptually, Luigi is similar to `GNU
+Make <http://www.gnu.org/software/make/>`_ where you have certain tasks
+and these tasks in turn may have dependencies on other tasks. There are
+also some similarities to `Oozie <http://oozie.apache.org/>`_
+and `Azkaban <http://data.linkedin.com/opensource/azkaban>`_. One major
+difference is that Luigi is not just built specifically for Hadoop, and
+it's easy to extend it with other kinds of tasks.
+</p>
+
+在 Luigi 里任何东西都是 Python 。它没有采用 XML 配置或者类似的外部数据文件，
+而是直接在 Python 里指定依赖图。这样就非常简单去构建起复杂的任务依赖图，
+比如涉及到时间代数或者递归引用到当前任务的其他版本（这个正是 Luiti 存在的目的，
+译者注）。不管怎样，工作流触发的东西不只是 Python 里的，还包括比如 [Pig][8] 脚本，
+或者 [scp][9] 之类。
+
+
+<p class="hidden">
+Everything in Luigi is in Python. Instead of XML configuration or
+similar external data files, the dependency graph is specified *within
+Python*. This makes it easy to build up complex dependency graphs of
+tasks, where the dependencies can involve date algebra or recursive
+references to other versions of the same task. However, the workflow can
+trigger things not in Python, such as running
+`Pig scripts <http://luigi.readthedocs.org/en/latest/api/luigi.contrib.pig.html>`_
+or `scp'ing files <http://luigi.readthedocs.org/en/latest/api/luigi.contrib.ssh.html>`_.
+</p>
+
+
+## 谁在[使用 Luigi][10] ？
+
+Several companies have written blog posts or presentation about Luigi:
+
+* [Spotify (NYC Data Science)](http://www.slideshare.net/erikbern/luigi-presentation-nyc-data-science)
+* [Foursquare](http://www.slideshare.net/OpenAnayticsMeetup/luigi-presentation-17-23199897)
+* [Mortar Data](http://help.mortardata.com/technologies/luigi)
+* [Stripe](http://www.slideshare.net/PyData/python-as-part-of-a-production-machine-learning-stack-by-michael-manapat-pydata-sv-2014)
+* [Asana](https://eng.asana.com/2014/11/stable-accessible-data-infrastructure-startup/)
+* [Buffer](https://overflow.bufferapp.com/2014/10/31/buffers-new-data-architecture/)
+* [SeatGeek](http://chairnerd.seatgeek.com/building-out-the-seatgeek-data-pipeline/)
+* [Treasure Data](http://blog.treasuredata.com/blog/2015/02/25/managing-the-data-pipeline-with-git-luigi/)
+* [Growth Intelligence](http://www.slideshare.net/growthintel/a-beginners-guide-to-building-data-pipelines-with-luigi)
+
+
 [0]: https://github.com/spotify/luigi
 [1]: https://github.com/spotify/luigi#more-background
+[2]: https://github.com/spotify/luigi#dependency-graph-example
+[3]: https://raw.githubusercontent.com/spotify/luigi/master/doc/user_recs.png
+[4]: https://www.spotify.com/us/
+[5]: http://www.gnu.org/software/make/
+[6]: http://oozie.apache.org/
+[7]: http://data.linkedin.com/opensource/azkaban
+[8]: http://luigi.readthedocs.org/en/latest/api/luigi.contrib.pig.html
+[9]: http://luigi.readthedocs.org/en/latest/api/luigi.contrib.ssh.html
+[10]: https://github.com/spotify/luigi#who-uses-luigi
+[11]: http://luigi.readthedocs.org/en/latest/
