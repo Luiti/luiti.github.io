@@ -231,7 +231,6 @@ class DAG(object):
 
 现在在很大程度上已经拆分开代码了。同理，我们也可以把当前 DAG class
 再拆分成更细的模块，或者和其他模块进行交互操作。这已经是软件工程上很大的一个进步了。
-
 让我们继续来享受来自 面向对象语言里提供的 模版机制 的好处：
 
 ```python
@@ -265,6 +264,6 @@ Luiti 两个更高层次的软件抽象。
 
 
 [1]: https://en.wikipedia.org/wiki/Directed_acyclic_graph
-[2]: https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Directed_acyclic_graph_3.svg/356px-Directed_acyclic_graph_3.svg.png
+[2]: /chinese/images/356px-Directed_acyclic_graph_3.svg.png
 [3]: https://docs.python.org/2/reference/datamodel.html
 [4]: https://en.wikipedia.org/wiki/Extract,_transform,_load
