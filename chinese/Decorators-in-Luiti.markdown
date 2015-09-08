@@ -7,3 +7,6 @@ title: Luiti 里的装饰器
 > {{ site.chinese_article.description }}
 
 
+[English Document][0]
+
+[0]: /document_guide.html#task-decorators
