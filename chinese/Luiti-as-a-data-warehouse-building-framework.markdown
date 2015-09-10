@@ -1,6 +1,6 @@
 ---
 layout: chinese_luiti
-title: 用 Luiti 作为构建数据仓库的软件框架
+title: 使用 Luiti 作为构建数据仓库的软件框架
 ---
 
 # {{ page.title }}
