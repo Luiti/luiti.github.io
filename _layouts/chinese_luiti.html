@@ -16,10 +16,29 @@
   </body>
 </html>
 
+<div id="other_links_data" class="hidden">
+  <hr>
+
+  <div>
+    <ol id="other_links">
+      <li><a class='sidebar-nav-item' href='/talks/Python-Conf-2015-Shanghai.html'>Python Conf 2015 Shanghai 十分钟闪电演讲纪录</a></li>
+    </ol>
+  </div>
+</div>
+
 <style>
 div.content.container {
   margin-top: -80px;
   min-width: 62%;
+}
+
+ol#other_links {
+  margin-left: -20px;
+}
+ol#other_links li {
+}
+ol#other_links li a {
+  font-size: 0.6rem;
 }
 </style>
 
@@ -83,6 +102,10 @@ div.content.container {
       var new_url = window.location.href.replace("https", "http");
       window.location = new_url;
     };
+
+
+    // Add other links to sidebar
+    sidebar.append($("#other_links_data").html());
 
   });
 </script>
