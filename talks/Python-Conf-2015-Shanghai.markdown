@@ -6,7 +6,7 @@ title: Python Conf 2015 Shanghai 《使用 Luiti 来构建数据仓库》十分�
 ### {{ page.title }}
 
 * 会场信息：http://cn.pycon.org/2015/shanghai.html
-* 内容注明：考虑到闪电演讲只有十分钟，我先现场演示 Luiti 的任务可视化，再讲数据仓库如何设计。
+* 演讲稿下载：https://github.com/Luiti/luiti.github.io/raw/master/talks/Luiti-Python-China-2015.pdf
 
 ![1][1]
 
