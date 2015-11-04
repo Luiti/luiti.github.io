@@ -4,7 +4,7 @@ rvm:
 
 # Assume bundler is being used, install step will run `bundle install`.
 script:
-  - ./scripts/cibuild
+  - bundle exec jekyll build
 
 # branch whitelist
 branches:
