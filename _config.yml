@@ -17,6 +17,7 @@ version: 0.2.1 # luiti version
 
 
 # Dependencies
+exclude: [vendor]  # https://github.com/jekyll/jekyll/issues/2938 let Jekyll skip these view template folders.
 markdown:         redcarpet  # support 1. anchor 2. code highlight
 redcarpet:  # ref from https://github.com/jekyll/jekyll/issues/1249
     extensions: [with_toc_data]
